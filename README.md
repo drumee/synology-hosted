@@ -50,21 +50,21 @@ The purpose of this task to bind your domain name to the Ip Address of your Syno
 - Check your IP addresses. Keep them noted. You may have IPV4 and IPV6. At least one of them is reuired. They must be public, i.e reachable from Public Internet.
 - Open the ports or network manager and add NAT rules as follow
 
-  | Type    |  WAN  | LAN   |
+  | Type    | LAN   |  WAN  |
   |---------|-------|-------|
-  | tcp/udp | 53    | 4353  |
-  | tcp     | 443   | 6443  |
-  | tcp     | 80    | 4080  |
-  | udp     | 10000 | 60000 |
-  | tcp     | 8888  | 6888  |
-  | udp     | 3478  | 4478  |
-  | tcp     | 5222  | 6222  |
-  | tcp     | 5280  | 6280  |
-  | tcp     | 5281  | 6281  |
-  | tcp     | 5349  | 6349  |
-  | tcp     | 8080  | 6080  |
-  | tcp     | 9090  | 6090  |
-  | tcp     | 5282  | 6282  |
+  | tcp/udp | 4353  | 53    |
+  | tcp     | 6443  | 443   |
+  | tcp     | 4080  | 80    |
+  | udp     | 60000 | 10000 |
+  | tcp     | 6888  | 8888  |
+  | udp     | 4478  | 3478  |
+  | tcp     | 6222  | 5222  |
+  | tcp     | 6280  | 5280  |
+  | tcp     | 6281  | 5281  |
+  | tcp     | 6349  | 5349  |
+  | tcp     | 6080  | 8080  |
+  | tcp     | 6090  | 9090  |
+  | tcp     | 6282  | 5282  |
 
 Note: Values in WAN column must be exactly the same. The ones in LAN column may be changed to comply your own environment. Keep these values noted. You will need them later to configure create Drumee Container.
 
