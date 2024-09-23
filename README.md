@@ -47,7 +47,7 @@ The purpose of this task to bind your domain name to the Ip Address of your Syno
 ### Prepare your Internet Router
 - Refer to you ISP to know how to change your network settings
 - Log into you Internet Router
-- Check your IP addresses. Keep them noted.
+- Check your IP addresses. Keep them noted. You may have IPV4 and IPV6. At least one of them is reuired. They must be public, i.e reachable from Public Internet.
 - Open the ports or network manager and add NAT rules as follow
 
   | Type    |  WAN  | LAN   |
@@ -81,8 +81,11 @@ Once the volume(s) created, create two Synology "Shared Folders". These folders 
 You will have to create two Shared Folders with the name of your own preference. It's recommended to prefix them, so that it will be easy to know what kind of data are being stored. For example : 
 - drumee-mfs for Drumee Filesystem Storage 
 - drumee-db for Drumee Database Storage
+![Create shared folder](https://github.com/drumee/synology-hosted/blob/main/images/create-shared-folder.png)
+![Configure shared folder](https://github.com/drumee/synology-hosted/blob/main/images/setup-shared-folder.png)
 
 These Shared Folders should be hidden to users without permission. Also, only administrator should be the only user who can access them.
+![Configure permission](https://github.com/drumee/synology-hosted/blob/main/images/setup-permission.png)
 
 ### Setup Drumee Container
 From Synology main page, open Package Center. 
@@ -95,6 +98,7 @@ From Synology main page, open Package Center.
 - From the results list, select "drumee/stable" and download
 - Optionnaly give the name you want to the conatiaber
 - Enable auto-restart option and click next
+  ![create shared folder](https://github.com/drumee/synology-hosted/blob/main/images/create-container.png)
 
 #### Port settings
 Before you start, refer to the port settings you have done on your Internet Router. Have them in a way you can copy/paste easily. 
