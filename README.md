@@ -103,12 +103,14 @@ From Synology main page, open Package Center.
 #### Port settings
 Before you start, refer to the port settings you have done on your Internet Router. Have them in a way you can copy/paste easily. 
 - In Port Settings block, click the button +Add. You will have to do this for each port. Copy the value from the column WAN and paste it into the box Container Port. Select the right port from the dropdown.
+![Configure shared folder](https://github.com/drumee/synology-hosted/blob/main/images/port-settings.png)
 
 #### Volume settings
 - In the Volume Settings, click +Add Folder
 - From the popip, select the shared folder you've created:
   * Next to the shared folder drumee-mfs, type /data
   * Next to the shared folder drumee-database, type /srv/db
+![Configure shared folder](https://github.com/drumee/synology-hosted/blob/main/images/volume-settings.png)
 
 #### Environment
 Refer to the list of (Environment Variables) [https://github.com/drumee/debian-hosted/blob/main/env.sh] to understand their purpose
@@ -121,3 +123,4 @@ Click the button +Add. You will have to do this for each variable as below.
 - DRUMEE_DB_DIR=/svr/db
 - DRUMEE_DATA_DIR=/data
 - ACME_EMAIL_ACCOUNT
+![Configure shared folder](https://github.com/drumee/synology-hosted/blob/main/images/env-settings.png)
