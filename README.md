@@ -52,12 +52,12 @@ The purpose of this task to bind your domain name to the Ip Address of your Syno
 
   | LAN   |  WAN  | Type    |
   |-------|-------|---------|
+  | 60000 | 10000 | udp     |
+  | 4478  | 3478  | udp     |
   | 4353  | 53    | tcp/udp |
   | 6443  | 443   | tcp     |
   | 4080  | 80    | tcp     |
-  | 60000 | 10000 | udp     |
   | 6888  | 8888  | tcp     |
-  | 4478  | 3478  | udp     |
   | 6222  | 5222  | tcp     |
   | 6280  | 5280  | tcp     |
   | 6281  | 5281  | tcp     |
