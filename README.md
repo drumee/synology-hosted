@@ -98,7 +98,7 @@ From Synology main page, open Package Center.
 - From the results list, select "drumee/stable" and download
 - Optionnaly give the name you want to the conatiaber
 - Enable auto-restart option and click next
-  ![create shared folder](https://github.com/drumee/synology-hosted/blob/main/images/create-container.png)
+  ![create shared folder](https://github.com/drumee/synology-hosted/blob/main/images/create-container-2.png)
 
 #### Port settings
 Before you start, refer to the port settings you have done on your Internet Router. Have them in a way you can copy/paste easily. 
