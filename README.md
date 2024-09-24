@@ -31,7 +31,9 @@ The installation package will use Debian Bookworm Docker Image in which all depe
 - It is recommanded not to share DB server with any other application
 
 ## Installation 
-### Prepare your Domain Name
+### Prepare your ISP settings
+
+#### Prepare you IP addresses
 This task depends on your Domain Name Provider. Replace *example.org* by your own domain name. If you don't have IP V6 address, just fill in IPV4 fields.
 The purpose of this task to bind your domain name to the Ip Address of your Synology Box. You will have to create following records in your Domain Name Provider:
 
@@ -43,6 +45,14 @@ The purpose of this task to bind your domain name to the Ip Address of your Syno
   | ns1.example.org  | AAA    | your.ip.6.address  |
   | ns2.example.org  | A      | your.ip.4.address  |
   | ns2.example.org  | AAA    | your.ip.6.address  |
+
+#### Change the default Domain Name Server (DNS)
+This section will replace your ISP DNS by the one that run on your own Synology NAS. To make this effective, open your ISP interface and change current Name Servers to ns1.example.org and ns2.example.org
+
+#### Change your GLUE DNS
+Open your ISP interface and add following entries:
+- ns1.example.org 
+- ns2.example.org
 
 ### Prepare your Internet Router
 - Refer to you ISP to know how to change your network settings
@@ -61,10 +71,10 @@ The purpose of this task to bind your domain name to the Ip Address of your Syno
   | 6222  | 5222  | tcp     |
   | 6280  | 5280  | tcp     |
   | 6281  | 5281  | tcp     |
+  | 6282  | 5282  | tcp     |
   | 6349  | 5349  | tcp     |
   | 6080  | 8080  | tcp     |
   | 6090  | 9090  | tcp     |
-  | 6282  | 5282  | tcp     |
 
 Note: Values in WAN column must be exactly the same. The ones in LAN column may be changed to comply your own environment. Keep these values noted. You will need them later to configure create Drumee Container.
 
