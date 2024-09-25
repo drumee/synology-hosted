@@ -111,7 +111,7 @@ From Synology main page, open Package Center.
   ![create shared folder](https://github.com/drumee/synology-hosted/blob/main/images/create-container-2.png)
 
 #### Port settings
-Before you start, refer to the port settings you have done on your (Internet Router)[#prepare-your-internet-router]. Have them in a way you can copy/paste easily. 
+Before you start, refer to the port settings you have done on your [Internet Router](#prepare-your-internet-router). Have them in a way you can copy/paste easily. 
 - In Port Settings block, click the button +Add. You will have to do this for each port. Copy the value from the column WAN and paste it into the box Container Port. Select the right port from the dropdown.
 ![Configure shared folder](https://github.com/drumee/synology-hosted/blob/main/images/port-settings.png)
 
