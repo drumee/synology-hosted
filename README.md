@@ -143,7 +143,7 @@ Check that everything is running as expected from the Terminal.
 Once the installation completed, you will receive a link sent to the *ADMIN_EMAIL*. Click on the link and set the admin pass word. That's it !
 
 ## Installation from a template file
-There a faster way to install. 
+There a faster way to install. [Watch video here](https://youtu.be/8RQWJMeMj6k)
 - Download the template from [here](https://github.com/drumee/synology-hosted/blob/main/template.json)
 - Edit the file by setting you own values in following sections:
 - [env_variables](https://github.com/drumee/synology-hosted/blob/main/template.json#L10)
@@ -152,7 +152,7 @@ There a faster way to install.
 - Save the file
 - Open the Container manager
 - Select Action -> Import -> From Local Device
-[Watch video here](https://youtu.be/8RQWJMeMj6k)
+![Open Template](https://github.com/drumee/synology-hosted/blob/main/images/open-terminal.png)
 
 Check that everything is running as expected from the Terminal.
 - In the containers list, select Drumee Container. Click Action -> Open the terminal. 
