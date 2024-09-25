@@ -80,7 +80,7 @@ Note: Values in WAN column must be exactly the same. The ones in LAN column may 
 
 ### Prepare your Drumee Volumes
 #### Basic knowledge
-Refer to Synology Documentatio to (create a volume) [https://kb.synology.com/en-my/DSM/help/DSM/StorageManager/volume_create_volume?version=7] or watch video tutorials, (for example this good one) [https://youtu.be/iR3BqL0_7J4] but there are plentyful of them. Just pick the one you are easy with.
+Refer to Synology Documentatio to [create a volume](https://kb.synology.com/en-my/DSM/help/DSM/StorageManager/volume_create_volume?version=7) or watch video tutorials, [for example this good one](https://youtu.be/iR3BqL0_7J4), but there are plentyful of them. Just pick the one you are easy with.
 
 Once the volume(s) created, create two Synology "Shared Folders". These folders must not be used by other applications or users. If you are confotable enough with your drives and you plane to have an extensive usage, it is recommended to have two dedicated volumes.
 
@@ -111,7 +111,7 @@ From Synology main page, open Package Center.
   ![create shared folder](https://github.com/drumee/synology-hosted/blob/main/images/create-container-2.png)
 
 #### Port settings
-Before you start, refer to the port settings you have done on your Internet Router. Have them in a way you can copy/paste easily. 
+Before you start, refer to the port settings you have done on your (Internet Router)[#prepare-your-internet-router]. Have them in a way you can copy/paste easily. 
 - In Port Settings block, click the button +Add. You will have to do this for each port. Copy the value from the column WAN and paste it into the box Container Port. Select the right port from the dropdown.
 ![Configure shared folder](https://github.com/drumee/synology-hosted/blob/main/images/port-settings.png)
 
