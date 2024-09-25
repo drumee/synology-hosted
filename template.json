@@ -1,0 +1,148 @@
+{
+   "CapAdd" : null,
+   "CapDrop" : null,
+   "cmd" : "",
+   "cpu_priority" : 0,
+   "enable_publish_all_ports" : false,
+   "enable_restart_policy" : true,
+   "enable_service_portal" : null,
+   "enabled" : true,
+   "env_variables" : [
+      {
+         "key" : "PATH",
+         "value" : "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      },
+      {
+         "key" : "DRUMEE_DESCRIPTION",
+         "value" : "My Great Drumee Box"
+      },
+      {
+         "key" : "DRUMEE_DOMAIN_NAME",
+         "value" : "example.com"
+      },
+      {
+         "key" : "PUBLIC_IP4",
+         "value" : "xx.xx.xx.xx"
+      },
+      {
+         "key" : "PUBLIC_IP6",
+         "value" : "xxxx:xxxx:xxxx:xxxx::1"
+      },
+      {
+         "key" : "ADMIN_EMAIL",
+         "value" : "me@example.com"
+      }
+   ],
+   "exporting" : false,
+   "id" : "7b8cb92fcadaa23ab34f166bdc5b90847ec648595cf8ee2b3df07df04a5b5748",
+   "image" : "drumee/stable:latest",
+   "is_ddsm" : false,
+   "is_package" : false,
+   "labels" : {},
+   "links" : [],
+   "memory_limit" : 0,
+   "name" : "drumee",
+   "network" : [
+      {
+         "driver" : "bridge",
+         "name" : "bridge"
+      }
+   ],
+   "network_mode" : "bridge",
+   "port_bindings" : [
+      {
+         "container_port" : 10000,
+         "host_port" : 60000,
+         "type" : "udp"
+      },
+      {
+         "container_port" : 3478,
+         "host_port" : 4478,
+         "type" : "udp"
+      },
+      {
+         "container_port" : 443,
+         "host_port" : 6443,
+         "type" : "tcp"
+      },
+      {
+         "container_port" : 5222,
+         "host_port" : 6222,
+         "type" : "tcp"
+      },
+      {
+         "container_port" : 5280,
+         "host_port" : 6280,
+         "type" : "tcp"
+      },
+      {
+         "container_port" : 5281,
+         "host_port" : 6281,
+         "type" : "tcp"
+      },
+      {
+         "container_port" : 5282,
+         "host_port" : 6282,
+         "type" : "tcp"
+      },
+      {
+         "container_port" : 53,
+         "host_port" : 4353,
+         "type" : "tcp"
+      },
+      {
+         "container_port" : 53,
+         "host_port" : 4353,
+         "type" : "udp"
+      },
+      {
+         "container_port" : 5349,
+         "host_port" : 6349,
+         "type" : "tcp"
+      },
+      {
+         "container_port" : 80,
+         "host_port" : 4080,
+         "type" : "tcp"
+      },
+      {
+         "container_port" : 8080,
+         "host_port" : 6080,
+         "type" : "tcp"
+      },
+      {
+         "container_port" : 8888,
+         "host_port" : 6888,
+         "type" : "tcp"
+      },
+      {
+         "container_port" : 9090,
+         "host_port" : 6090,
+         "type" : "tcp"
+      }
+   ],
+   "privileged" : false,
+   "service_portals" : [],
+   "shortcut" : {
+      "enable_shortcut" : false,
+      "enable_status_page" : false,
+      "enable_web_page" : false,
+      "web_page_url" : ""
+   },
+   "use_host_network" : false,
+   "version" : 2,
+   "volume_bindings" : [
+      {
+         "host_volume_file" : "/drumee-data",
+         "is_directory" : true,
+         "mount_point" : "/data",
+         "type" : "rw"
+      },
+      {
+         "host_volume_file" : "/drumee-db",
+         "is_directory" : true,
+         "mount_point" : "/srv/db",
+         "type" : "rw"
+      }
+   ]
+}

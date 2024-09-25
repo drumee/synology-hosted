@@ -85,19 +85,20 @@ Refer to Synology Documentatio to [create a volume](https://kb.synology.com/en-m
 Once the volume(s) created, create two Synology "Shared Folders". These folders must not be used by other applications or users. If you are confotable enough with your drives and you plane to have an extensive usage, it is recommended to have two dedicated volumes.
 
 #### Create Shared folders
+Below instruction is detailed as [a short video here](https://youtu.be/HZx4fbfv65E)
 - From the main Interface Open the control Panel
 - From the Control Panel, open Shared Foder
 - From the topbar menu, click create -> Create Shared Folder
 You will have to create two Shared Folders with the name of your own preference. It's recommended to prefix them, so that it will be easy to know what kind of data are being stored. For example : 
-- drumee-mfs for Drumee Filesystem Storage 
+- drumee-data for Drumee Filesystem Storage 
 - drumee-db for Drumee Database Storage
-![Create shared folder](https://github.com/drumee/synology-hosted/blob/main/images/create-shared-folder.png)
-![Configure shared folder](https://github.com/drumee/synology-hosted/blob/main/images/setup-shared-folder.png)
+![Create shared folder](https://github.com/drumee/synology-hosted/blob/main/images/create-shared-folder-2.png)
 
 These Shared Folders should be hidden to users without permission. Also, only administrator should be the only user who can access them.
 ![Configure permission](https://github.com/drumee/synology-hosted/blob/main/images/setup-permission.png)
 
 ### Setup Drumee Container
+Below instruction is detailed as [a short video here](https://youtu.be/NM1gJUQ2bmw)
 From Synology main page, open Package Center. 
 - From Package Center, open Docker Manager. 
 - From Docker Manger, open Conatiner
@@ -118,19 +119,17 @@ Before you start, refer to the port settings you have done on your [Internet Rou
 #### Volume settings
 - In the Volume Settings, click +Add Folder
 - From the popip, select the shared folder you've created:
-  * Next to the shared folder drumee-mfs, type /data
-  * Next to the shared folder drumee-database, type /srv/db
-![Configure shared folder](https://github.com/drumee/synology-hosted/blob/main/images/volume-settings.png)
+  * Next to the shared folder drumee-data, type /data
+  * Next to the shared folder drumee-db, type /srv/db
+![Configure shared folder](https://github.com/drumee/synology-hosted/blob/main/images/volume-settings-2.png)
 
 #### Environment
-Refer to the list of (Environment Variables) [https://github.com/drumee/debian-hosted/blob/main/env.sh] to understand their purpose
+Refer to the list of [Environment Variables](https://github.com/drumee/debian-hosted/blob/main/env.sh) to understand their purpose
 Click the button +Add. You will have to do this for each variable as below. 
 - DRUMEE_DESCRIPTION
 - DRUMEE_DOMAIN_NAME
 - PUBLIC_IP4
 - PUBLIC_IP6
 - ADMIN_EMAIL
-- DRUMEE_DB_DIR=/svr/db
-- DRUMEE_DATA_DIR=/data
 - ACME_EMAIL_ACCOUNT
 ![Configure shared folder](https://github.com/drumee/synology-hosted/blob/main/images/env-settings.png)
