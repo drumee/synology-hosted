@@ -94,8 +94,6 @@ You will have to create two Shared Folders with the name of your own preference.
 - drumee-db for Drumee Database Storage
 ![Create shared folder](https://github.com/drumee/synology-hosted/blob/main/images/create-shared-folder-2.png)
 
-These Shared Folders should be hidden to users without permission. Also, only administrator should be the only user who can access them.
-![Configure permission](https://github.com/drumee/synology-hosted/blob/main/images/setup-permission.png)
 
 ### Setup Drumee Container
 Below instruction is detailed as [a short video here](https://youtu.be/NM1gJUQ2bmw)
