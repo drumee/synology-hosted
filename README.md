@@ -30,7 +30,7 @@ The installation package will use Debian Bookworm Docker Image in which all depe
 - The provided domain name can not be shared with existing or futur application
 - It is recommanded not to share DB server with any other application
 
-## Installation 
+## Manual Installation
 ### Prepare your ISP settings
 
 #### Prepare you IP addresses
@@ -86,6 +86,7 @@ Once the volume(s) created, create two Synology "Shared Folders". These folders 
 
 #### Create Shared folders
 Below instruction is detailed as [a short video here](https://youtu.be/HZx4fbfv65E)
+
 - From the main Interface Open the control Panel
 - From the Control Panel, open Shared Foder
 - From the topbar menu, click create -> Create Shared Folder
@@ -97,7 +98,8 @@ You will have to create two Shared Folders with the name of your own preference.
 
 ### Setup Drumee Container
 Below instruction is detailed as [a short video here](https://youtu.be/NM1gJUQ2bmw)
-From Synology main page, open Package Center. 
+
+- From Synology main page, open Package Center. 
 - From Package Center, open Docker Manager. 
 - From Docker Manger, open Conatiner
 - On the right panel, click the button "Create"
@@ -131,3 +133,29 @@ Click the button +Add. You will have to do this for each variable as below.
 - ADMIN_EMAIL
 - ACME_EMAIL_ACCOUNT
 ![Configure shared folder](https://github.com/drumee/synology-hosted/blob/main/images/env-settings.png)
+####
+Once everything is done, click Next. The installation has started.
+
+Check that everything is running as expected from the Terminal.
+- In the containers list, select Drumee Container. Click Action -> Open the terminal. 
+![Open Terminal](https://github.com/drumee/synology-hosted/blob/main/images/open-terminal.png)
+
+Once the installation completed, you will receive a link sent to the *ADMIN_EMAIL*. Click on the link and set the admin pass word. That's it !
+
+## Installation from a template file
+There a faster way to install. 
+- Download the template from [here](https://github.com/drumee/synology-hosted/blob/main/template.json)
+- Edit the file by setting you own values in following sections:
+- [env_variables](https://github.com/drumee/synology-hosted/blob/main/template.json#L10)
+- [port_bindings](https://github.com/drumee/synology-hosted/blob/main/template.json#L52)
+- [volume_bindings](https://github.com/drumee/synology-hosted/blob/main/template.json#L134)
+- Save the file
+- Open the Container manager
+- Select Action -> Import -> From Local Device
+[Watch video here](https://youtu.be/8RQWJMeMj6k)
+
+Check that everything is running as expected from the Terminal.
+- In the containers list, select Drumee Container. Click Action -> Open the terminal. 
+![Open Terminal](https://github.com/drumee/synology-hosted/blob/main/images/open-terminal.png)
+
+Once the installation completed, you will receive a link sent to the *ADMIN_EMAIL*. Click on the link and set the admin pass word. That's it !
