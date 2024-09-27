@@ -11,6 +11,13 @@ The installation package will use Debian Bookworm Docker Image in which all depe
 - Control access to your Internet Router
 - At least one fixed public IP addresses, IPV4 and/or IPV6
 
+### Network Capabilities
+If you plan to install your Drumee Server behind an Internet Box, ensure that it has following capabilities:
+- NAT (Network Translation Address)
+- Fixed public IP address
+- DHCP settings
+- DNS settings
+
 ### Synology
 #### Operating System
 - DSM 7.0 or higher
@@ -30,7 +37,7 @@ The installation package will use Debian Bookworm Docker Image in which all depe
 - The provided domain name can not be shared with existing or futur application
 - It is recommanded not to share DB server with any other application
 
-## Manual Installation
+## Installation
 ### Prepare your ISP settings
 
 #### Prepare you IP addresses
@@ -40,11 +47,11 @@ The purpose of this task to bind your domain name to the Ip Address of your Syno
   | Domain Name      |  Type  | Target             |
   |------------------|--------|--------------------|
   | example.org      | A      | your.ip.4.address  |
-  | example.org      | AAA    | your.ip.6.address  |
+  | example.org      | AAAA   | your.ip.6.address  |
   | ns1.example.org  | A      | your.ip.4.address  |
-  | ns1.example.org  | AAA    | your.ip.6.address  |
+  | ns1.example.org  | AAAA   | your.ip.6.address  |
   | ns2.example.org  | A      | your.ip.4.address  |
-  | ns2.example.org  | AAA    | your.ip.6.address  |
+  | ns2.example.org  | AAAA   | your.ip.6.address  |
 
 #### Change the default Domain Name Server (DNS)
 This section will replace your ISP DNS by the one that run on your own Synology NAS. To make this effective, open your ISP interface and change current Name Servers to ns1.example.org and ns2.example.org
@@ -55,6 +62,8 @@ Open your ISP interface and add following entries:
 - ns2.example.org
 
 ### Prepare your Internet Router
+If your NAS is not inside a private network or you don't need address translation or ports mapping, you can skip this section and jump to [Prepare your Drumee Volumes](#prepare-your-drumee-volumes)
+
 - Refer to you ISP to know how to change your network settings
 - Log into you Internet Router
 - Check your IP addresses. Keep them noted. You may have IPV4 and IPV6. At least one of them is reuired. They must be public, i.e reachable from Public Internet.
@@ -96,7 +105,24 @@ You will have to create two Shared Folders with the name of your own preference.
 ![Create shared folder](https://github.com/drumee/synology-hosted/blob/main/images/create-shared-folder-2.png)
 
 
-### Setup Drumee Container
+## Prepare Drumee Container from a template file
+This is the simplest way to setup container. But if you are not comfortable using file editor, jump to [Prepare Drumee Container from Container Manager](#prepare-drumee-montainer-from-montainer-manager).
+- Download the template from [here](https://github.com/drumee/synology-hosted/blob/main/template.json)
+- Edit the file by setting you own values in following sections:
+- [env_variables](https://github.com/drumee/synology-hosted/blob/main/template.json#L10)
+- [port_bindings](https://github.com/drumee/synology-hosted/blob/main/template.json#L52)
+- [volume_bindings](https://github.com/drumee/synology-hosted/blob/main/template.json#L134)
+- Save the file
+- Open the Container manager
+- Select Action -> Import -> From Local Device
+- Once the template imported, select the container, then click Action -> Start
+
+[Watch video here](https://youtu.be/8RQWJMeMj6k)
+
+The installation has started. Jump to [Monitoring Installation Progress](#monitoring -installation-progress)
+
+
+### Prepare Drumee Container from Container Manager
 Below instruction is detailed as [a short video here](https://youtu.be/NM1gJUQ2bmw)
 
 - From Synology main page, open Package Center. 
@@ -133,29 +159,15 @@ Click the button +Add. You will have to do this for each variable as below.
 - ADMIN_EMAIL
 - ACME_EMAIL_ACCOUNT
 ![Configure shared folder](https://github.com/drumee/synology-hosted/blob/main/images/env-settings.png)
-####
+
 Once everything is done, click Next. The installation has started.
 
-Check that everything is running as expected from the Terminal.
+
+#### Monitoring Installation Progress
+To check that everything is running as expected, open the container terminal.
+
 - In the containers list, select Drumee Container. Click Action -> Open the terminal. 
 ![Open Terminal](https://github.com/drumee/synology-hosted/blob/main/images/open-terminal.png)
 
 Once the installation completed, you will receive a link sent to the *ADMIN_EMAIL*. Click on the link and set the admin pass word. That's it !
 
-## Installation from a template file
-There a faster way to install. [Watch video here](https://youtu.be/8RQWJMeMj6k)
-- Download the template from [here](https://github.com/drumee/synology-hosted/blob/main/template.json)
-- Edit the file by setting you own values in following sections:
-- [env_variables](https://github.com/drumee/synology-hosted/blob/main/template.json#L10)
-- [port_bindings](https://github.com/drumee/synology-hosted/blob/main/template.json#L52)
-- [volume_bindings](https://github.com/drumee/synology-hosted/blob/main/template.json#L134)
-- Save the file
-- Open the Container manager
-- Select Action -> Import -> From Local Device
-![Open Template](https://github.com/drumee/synology-hosted/blob/main/images/open-terminal.png)
-
-Check that everything is running as expected from the Terminal.
-- In the containers list, select Drumee Container. Click Action -> Open the terminal. 
-![Open Terminal](https://github.com/drumee/synology-hosted/blob/main/images/open-terminal.png)
-
-Once the installation completed, you will receive a link sent to the *ADMIN_EMAIL*. Click on the link and set the admin pass word. That's it !
