@@ -29,12 +29,16 @@
          "value" : "xxxx:xxxx:xxxx:xxxx::1"
       },
       {
+         "key" : "STORAGE_BACKUP",
+         "value" : "/srv/backup"
+      },
+      {
          "key" : "ADMIN_EMAIL",
          "value" : "me@example.com"
       }
    ],
    "exporting" : false,
-   "id" : "7b8cb92fcadaa23ab34f166bdc5b90847ec648595cf8ee2b3df07df04a5b5748",
+   "id" : "",
    "image" : "drumee/stable:latest",
    "is_ddsm" : false,
    "is_package" : false,
@@ -142,6 +146,12 @@
          "host_volume_file" : "/drumee-db",
          "is_directory" : true,
          "mount_point" : "/srv/db",
+         "type" : "rw"
+      },
+      {
+         "host_volume_file" : "/drumee-backup",
+         "is_directory" : true,
+         "mount_point" : "/srv/backup",
          "type" : "rw"
       }
    ]
