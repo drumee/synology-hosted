@@ -153,6 +153,12 @@
          "is_directory" : true,
          "mount_point" : "/srv/backup",
          "type" : "rw"
+      },
+      {
+         "host_volume_file" : "/drumee-exchange",
+         "is_directory" : true,
+         "mount_point" : "/exchangearea",
+         "type" : "rw"
       }
    ]
 }
