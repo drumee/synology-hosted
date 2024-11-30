@@ -72,18 +72,10 @@ If your NAS is not inside a private network or you don't need address translatio
   | LAN   |  WAN  | Type    |
   |-------|-------|---------|
   | 60000 | 10000 | udp     |
-  | 4478  | 3478  | udp     |
   | 4353  | 53    | tcp/udp |
   | 6443  | 443   | tcp     |
   | 4080  | 80    | tcp     |
-  | 6888  | 8888  | tcp     |
   | 6222  | 5222  | tcp     |
-  | 6280  | 5280  | tcp     |
-  | 6281  | 5281  | tcp     |
-  | 6282  | 5282  | tcp     |
-  | 6349  | 5349  | tcp     |
-  | 6080  | 8080  | tcp     |
-  | 6090  | 9090  | tcp     |
 
 Note: Values in WAN column must be exactly the same. The ones in LAN column may be changed to comply your own environment. Keep these values noted. You will need them later to configure create Drumee Container.
 
