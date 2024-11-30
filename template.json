@@ -60,11 +60,6 @@
          "type" : "udp"
       },
       {
-         "container_port" : 3478,
-         "host_port" : 4478,
-         "type" : "udp"
-      },
-      {
          "container_port" : 443,
          "host_port" : 6443,
          "type" : "tcp"
@@ -75,21 +70,6 @@
          "type" : "tcp"
       },
       {
-         "container_port" : 5280,
-         "host_port" : 6280,
-         "type" : "tcp"
-      },
-      {
-         "container_port" : 5281,
-         "host_port" : 6281,
-         "type" : "tcp"
-      },
-      {
-         "container_port" : 5282,
-         "host_port" : 6282,
-         "type" : "tcp"
-      },
-      {
          "container_port" : 53,
          "host_port" : 4353,
          "type" : "tcp"
@@ -100,28 +80,8 @@
          "type" : "udp"
       },
       {
-         "container_port" : 5349,
-         "host_port" : 6349,
-         "type" : "tcp"
-      },
-      {
          "container_port" : 80,
          "host_port" : 4080,
-         "type" : "tcp"
-      },
-      {
-         "container_port" : 8080,
-         "host_port" : 6080,
-         "type" : "tcp"
-      },
-      {
-         "container_port" : 8888,
-         "host_port" : 6888,
-         "type" : "tcp"
-      },
-      {
-         "container_port" : 9090,
-         "host_port" : 6090,
          "type" : "tcp"
       }
    ],
